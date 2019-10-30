@@ -1,0 +1,28 @@
+.contact {
+  width: 200px;
+  height: 238px;
+  text-align: -webkit-center;
+}
+
+.contact-photo {
+  width: 100%;
+  /* border-radius: 50%; */
+  /* margin: auto; */
+}
+
+.contact-photo-wrapper {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.contact-photo-wrapper .contact-photo {
+  width: 100%;
+}
+
+.contact .contact-name {
+  background: -webkit-gradient(radial, center, white);
+  /* background: white; */
+  margin-top: 8px;
+}
