@@ -1,17 +1,18 @@
 <div id="contactList" class="contact-list">
-  <!--<app-contact *ngFor="let contact in contactsList" [data]="contact"></app-contact>-->
-  <div class="contact" *ngFor="let contact of contactsList">
+  <app-contact *ngFor="let member of memberList" [contact]="member" (click)="selected=member"></app-contact>
+</div>
+<div *ngIf="selected" class="modal-wrapper">
+  <div class="modal-body">
+    <div (click)="selected=''" class="close-icon">close</div>
     <div class="contact-photo-wrapper">
-      <img class="contact-photo" [src]="'../../assets/'+contact.img+'.jpg'"/></div>
-    <div class="contact-name">{{contact.name}}</div>
-  </div>
-  <div class="contact" *ngFor="let contact of contactsList">
-    <div class="contact-photo-wrapper">
-      <img class="contact-photo" [src]="'../../assets/'+contact.img+'.jpg'"/></div>
-    <div class="contact-name">{{contact.name}}</div>
+      <img class="contact-photo" [src]="'../../../assets/' + selected.img+'.jpg'"/>
+    </div>
+    <div class="contact-name">{{selected.name}}</div>
+    <div class="contact-email">{{selected.email}}</div>
+    <div class="contact-number">{{selected.number}}</div>
+    <div class="contact-action">call</div>
+    <div class="contact-action">email</div>
   </div>
 </div>
-<button class="btn btn-primary" (click)="scrollUp()">up
-</button>
-<button class="btn btn-primary" (click)="scrollDown()">down
-</button>
+<button class="btn btn-primary" (click)="scrollUp()">up</button>
+<button class="btn btn-primary" (click)="scrollDown()">down</button>

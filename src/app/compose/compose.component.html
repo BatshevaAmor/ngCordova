@@ -1,0 +1,28 @@
+<div class="compose">
+  <div class="recipient"><span>To:</span>
+    <button (click)="loadContacts()">add</button>
+    <ul>
+      <li *ngFor="let c of selectedContacts">{{c.name}}</li>
+    </ul>
+    <div class="modal-wrapper" *ngIf="showContactsModal">
+      <div class="close-icon" (click)="showContactsModal=false;">back</div>
+      <div class="modal-body">
+        <div class="contacts-row">
+          <div class="contact-row" *ngFor="let member of contactsList">
+            <input type="checkbox" class="pull-left checkbox" (change)="member.selected =! member.selected">
+            <div class="contact-photo-wrapper">
+              <img class="contact-photo" [src]="'../../../assets/' + member.img+'.jpg'"/>
+            </div>
+            <span>{{member.name}}</span>
+          </div>
+        </div>
+        <button (click)="applyContacts()" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+  <div class="email-body">
+    <span>Write your mail below:</span>
+    <textarea [innerHTML]="message"></textarea>
+  </div>
+  <button (click)="send()" class="btn-default">send</button>
+</div>

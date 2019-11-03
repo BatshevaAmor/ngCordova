@@ -7,13 +7,14 @@ import {ContactsService} from '../services/contacts.service';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-  private contactsList = [];
+  private memberList = [];
+  selected;
 
   constructor(private service: ContactsService) {
   }
 
   ngOnInit() {
-    this.contactsList = this.service.getContacts();
+    this.memberList = this.service.getContacts();
   }
 
   scrollUp() {

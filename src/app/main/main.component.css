@@ -19,17 +19,23 @@
   border: red 3px solid;
   color: red;
   background: white;
-  border-radius: 50%;
+  border-radius: 10px;
   height: 22vh;
   text-align: -webkit-center;
   vertical-align: middle;
   width: 22vh;
   margin: 5vh 10vh;
+  font-size: 55px;
 }
+
 
 .card:nth-child(2) {
   color: yellow;
   border-color: yellow;
+}
+
+.card:hover:nth-child(2) {
+  background: yellow;
 }
 
 .card:nth-child(3) {
@@ -37,21 +43,31 @@
   border-color: #2196F3;
 }
 
+.card:hover:nth-child(3) {
+  background: #2196F3;
+}
+
 .card:nth-child(4) {
   color: darkmagenta;
   border-color: darkmagenta;
 }
 
+.card:hover:nth-child(4) {
+  background: darkmagenta;
+}
 .card:nth-child(5) {
   color: green;
   border-color: green;
 }
 
-.card:hover {
-  color: red;
-  background: white;
+.card:hover:nth-child(5) {
+  background: green;
 }
 
+.card:hover {
+  color: white;
+  background: red;
+}
 .row {
   justify-content: space-around;
   margin: 36px 0;

@@ -12,6 +12,8 @@ import router from './app.router';
 import {RouterModule} from '@angular/router';
 import {MainComponent} from './main/main.component';
 import {ContactsService} from './services/contacts.service';
+import {ComposeComponent} from './compose/compose.component';
+import {HttpClient, HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import {ContactsService} from './services/contacts.service';
     VidoesComponent,
     PhotosComponent,
     ContactComponent,
-    MainComponent
+    MainComponent,
+    ComposeComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(router)
   ],
   providers: [ContactsService],

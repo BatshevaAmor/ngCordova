@@ -35,3 +35,20 @@
   overflow-y: scroll;
   height: calc(100% - 64px);
 }
+
+.contact-action {
+  cursor: pointer;
+  float: left;
+  width: 100px;
+  background: green;
+  color: white;
+  border-radius: 50%;
+  height: 100px;
+  padding: 26px 0;
+  margin: 5% 14%;
+}
+
+.contact-action:last-child{
+  background: red;
+  float: right;
+}

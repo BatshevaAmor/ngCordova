@@ -1,6 +1,6 @@
 <div class="contact">
   <div class="contact-photo-wrapper">
-    <img class="contact-photo"
-         src="../../assets/batsheva.jpg"/></div>
-  <div class="contact-name">{{name}}</div>
+    <img class="contact-photo" [src]="'../../../assets/' + contact.img+'.jpg'"/>
+  </div>
+  <div class="contact-name">{{contact.name}}</div>
 </div>
