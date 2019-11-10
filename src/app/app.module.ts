@@ -14,6 +14,9 @@ import {MainComponent} from './main/main.component';
 import {ContactsService} from './services/contacts.service';
 import {ComposeComponent} from './compose/compose.component';
 import {HttpClient, HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
+import {SelectedPipe} from './pipes/selected.pipe';
+import {FormsModule} from '@angular/forms';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +28,17 @@ import {HttpClient, HttpClientJsonpModule, HttpClientModule} from '@angular/comm
     PhotosComponent,
     ContactComponent,
     MainComponent,
-    ComposeComponent
+    ComposeComponent,
+    SelectedPipe,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(router)
+    RouterModule.forRoot(router),
+    FormsModule
   ],
-  providers: [ContactsService],
+  providers: [ContactsService, SelectedPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

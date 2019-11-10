@@ -47,25 +47,25 @@
   background: #2196F3;
 }
 
-.card:nth-child(4) {
+.menu-list:last-child .card:nth-child(1) {
   color: darkmagenta;
   border-color: darkmagenta;
 }
 
-.card:hover:nth-child(4) {
+.menu-list:last-child .card:hover:nth-child(1) {
   background: darkmagenta;
 }
-.card:nth-child(5) {
+.menu-list:last-child .card:nth-child(2) {
   color: green;
   border-color: green;
 }
 
-.card:hover:nth-child(5) {
+.menu-list:last-child .card:hover:nth-child(2) {
   background: green;
 }
 
 .card:hover {
-  color: white;
+  color: white !important;
   background: red;
 }
 .row {

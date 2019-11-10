@@ -45,10 +45,19 @@
   border-radius: 50%;
   height: 100px;
   padding: 26px 0;
-  margin: 5% 14%;
 }
 
 .contact-action:last-child{
   background: red;
   float: right;
+}
+.buttons-area{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10%;
 }

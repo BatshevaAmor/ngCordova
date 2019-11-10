@@ -4,6 +4,7 @@ import {ContactsComponent} from './contacts/contacts.component';
 import {EmailComponent} from './email/email.component';
 import {MainComponent} from './main/main.component';
 import {ComposeComponent} from './compose/compose.component';
+import {SettingsComponent} from './settings/settings.component';
 
 const router: Routes = [
   {path: 'pages', component: AppComponent},
@@ -12,6 +13,7 @@ const router: Routes = [
   {path: 'contacts', component: ContactsComponent},
   {path: 'email', component: EmailComponent},
   {path: 'compose', component: ComposeComponent},
+  {path: 'settings', component: SettingsComponent},
   {path: '', redirectTo: 'default', pathMatch: 'full'},
   {path: '**', component: AppComponent}
 ];

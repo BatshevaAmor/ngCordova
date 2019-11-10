@@ -2,14 +2,23 @@
   <div class="recipient"><span>To:</span>
     <button (click)="loadContacts()">add</button>
     <ul>
-      <li *ngFor="let c of selectedContacts">{{c.name}}</li>
+      <li *ngFor="let c of selectedContacts | selected">
+        <div class="contact-photo-wrapper">
+          <img class="contact-photo" [src]="'../../../assets/' + c.img+'.jpg'"/>
+        </div>
+        {{c.name}}</li>
     </ul>
     <div class="modal-wrapper" *ngIf="showContactsModal">
       <div class="close-icon" (click)="showContactsModal=false;">back</div>
       <div class="modal-body">
+        <div class="buttons-area">
+          <button (click)="selectAll(true);">select all</button>
+          <button (click)="selectAll(false)">deselect all</button>
+        </div>
         <div class="contacts-row">
-          <div class="contact-row" *ngFor="let member of contactsList">
-            <input type="checkbox" class="pull-left checkbox" (change)="member.selected =! member.selected">
+          <div class="contact-row" *ngFor="let member of selectedContacts">
+            <input type="checkbox" [(ngModel)]="member.selected" class="pull-left checkbox">
+            <!--(change)="member.selected =! member.selected"-->
             <div class="contact-photo-wrapper">
               <img class="contact-photo" [src]="'../../../assets/' + member.img+'.jpg'"/>
             </div>
@@ -24,5 +33,5 @@
     <span>Write your mail below:</span>
     <textarea [innerHTML]="message"></textarea>
   </div>
-  <button (click)="send()" class="btn-default">send</button>
+  <button (click)="send()" class=" btn btn-success">send</button>
 </div>

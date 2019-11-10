@@ -16,11 +16,13 @@ export class ComposeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.contactsList = this.contactsService.getContacts();
+    this.selectedContacts = JSON.parse(JSON.stringify(this.contactsList));
+    // this.selectedContacts[0].selected = true;
   }
 
   loadContacts() {
     this.showContactsModal = true;
-    this.contactsList = this.contactsService.getContacts();
   }
 
   applyContacts() {
@@ -32,5 +34,9 @@ export class ComposeComponent implements OnInit {
     let recipients = [];
     this.selectedContacts.forEach(c => recipients = recipients.concat(c.email));
     this.contactsService.sendEmail({rec: recipients, body: this.message});
+  }
+
+  selectAll(b: boolean) {
+    this.selectedContacts.map(c => c.selected = b);
   }
 }

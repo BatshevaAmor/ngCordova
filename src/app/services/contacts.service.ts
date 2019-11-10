@@ -21,9 +21,13 @@ export class ContactsService {
       {name: 'Yehuda Abraham', img: 'yeuda', number: ''},
       {name: 'Chaim & Ruthy Holder', img: 'chaimRuthy', number: ''},
       {name: 'Shauli & Racheli Amor', img: 'shauliRacheli', number: '+972-58-3266274'},
-      {name: 'Moshe & Ayala Amor', img: 'mosheAyala', number: '+972-527607320'},
+      {name: 'Moshe & Ayala Amor', img: 'mosheAyala', email: ['4137415@gmail.com'], number: '+972-527607320'},
       {name: 'Baruch & Tali Ochayon', img: 'tali', number: '+972-'},
-      {name: 'All family', img: 'all-family', email: ['amorbatsheva@gmail.com', 'batyaamor@gmail.com', 'rivkaamor@gmail.com']},
+      {
+        name: 'All family',
+        img: 'all-family',
+        email: ['amorbatsheva@gmail.com', 'batyaamor@gmail.com', 'rivkaamor@gmail.com', '4137415@gmail.com']
+      },
       {name: 'kids', img: 'kids', number: '+972-3-5709340'},
       {name: 'Yossi Amor', img: 'yossi', number: '+972-3-5709340'}];
   }
